@@ -55,9 +55,7 @@ def is_valid_mail(mailid):
     except (MySQLdb.Error, MySQLdb.Warning) as e:
         app.logger.info(e)
         conn.close()
-    if (result > 0):
-        return True
-    return False
+
 
 def follow(chatId,new_following):
     new_following = list(set(new_following))
